@@ -118,7 +118,10 @@ nav {
 }
 
 .about-content img {
-    border-radius: 50%;
+    width: 200px;       /* Sets a clean, fixed width */
+    height: 200px;      /* Matches the width to keep it square */
+    object-fit: cover;  /* Prevents your face/photo from getting distorted or stretched */
+    border-radius: 50%; /* Keeps it in a perfect circle */
 }
 
 .about-content p {
