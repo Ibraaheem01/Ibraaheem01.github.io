@@ -22,3 +22,9 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     alert('Message sent! (This is a demo alert)');
     this.reset();
 });
+
+// Hide preloader when window loads
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('preload-finished');
+});
