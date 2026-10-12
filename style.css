@@ -270,6 +270,8 @@ footer {
 
     .about-content {
         flex-direction: column;
+        text-align: center;
+        gap: 1.5rem; /* Adds balanced spacing between the image and your bio text */
     }
 
     .hero h1 {
