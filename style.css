@@ -18,7 +18,7 @@ body {
 /* Navigation */
 nav {
     background: #151F28; /* Slightly lighter rich black for navbar contrast */
-    color: #FEE715; /* Vivid Yellow accent */
+    color: #A4193D; /* Crimson Red accent */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,14 +27,14 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(254, 231, 21, 0.2);
+    border-bottom: 1px solid rgba(164, 25, 61, 0.3);
 }
 
 .logo {
     font-family: 'Great Vibes', cursive;
     font-size: 2rem;
     font-weight: 400;
-    color: #FEE715; /* Vivid Yellow logo */
+    color: #A4193D; /* Crimson Red logo */
 }
 
 .nav-links {
@@ -51,14 +51,14 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #FEE715; /* Vivid Yellow hover */
+    color: #A4193D; /* Crimson Red hover */
 }
 
 .hamburger {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #FEE715;
+    color: #A4193D;
 }
 
 /* Home Section */
@@ -76,7 +76,7 @@ nav {
     font-family: 'Great Vibes', cursive;
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: #FEE715; /* Vivid Yellow accent */
+    color: #A4193D; /* Crimson Red accent */
 }
 
 .hero p {
@@ -86,8 +86,8 @@ nav {
 }
 
 .cta-button {
-    background: #FEE715; /* Vivid Yellow button */
-    color: #101820; /* Rich black text for sharp contrast */
+    background: #A4193D; /* Crimson Red button */
+    color: #fff; /* White text for sharp contrast */
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
@@ -97,7 +97,7 @@ nav {
 }
 
 .cta-button:hover {
-    background: #E5D010; /* Slightly deeper yellow on hover */
+    background: #8b1333; /* Darker crimson on hover */
     transform: translateY(-2px);
 }
 
@@ -112,7 +112,7 @@ nav {
 #about h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #FEE715; /* Vivid Yellow accent */
+    color: #A4193D; /* Crimson Red accent */
 }
 
 .about-content {
@@ -128,7 +128,7 @@ nav {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #FEE715; /* Vivid Yellow frame around your picture */
+    border: 3px solid #A4193D; /* Crimson Red frame around your picture */
 }
 
 .about-content p {
@@ -146,7 +146,7 @@ nav {
 #projects h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #FEE715;
+    color: #A4193D;
 }
 
 .project-grid {
@@ -162,14 +162,14 @@ nav {
     color: #E6E6E6;
     padding: 1.5rem;
     border-radius: 10px;
-    border: 1px solid rgba(254, 231, 21, 0.1);
+    border: 1px solid rgba(164, 25, 61, 0.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(254, 231, 21, 0.15); /* Soft yellow glow on hover */
+    box-shadow: 0 8px 20px rgba(164, 25, 61, 0.25); /* Soft crimson glow on hover */
 }
 
 .project-card img {
@@ -179,13 +179,13 @@ nav {
 
 .project-card h3 {
     margin: 1rem 0;
-    color: #FEE715; /* Vivid Yellow card titles */
+    color: #A4193D; /* Crimson Red card titles */
 }
 
 .project-link {
     display: inline-block;
     margin-top: 0.5rem;
-    color: #FEE715;
+    color: #A4193D;
     text-decoration: none;
     font-weight: bold;
 }
@@ -204,7 +204,7 @@ nav {
 #contact h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #FEE715;
+    color: #A4193D;
 }
 
 #contact-form {
@@ -228,12 +228,12 @@ nav {
 #contact-form input:focus,
 #contact-form textarea:focus {
     outline: none;
-    border-color: #FEE715; /* Focus ring turns Vivid Yellow */
+    border-color: #A4193D; /* Focus ring turns Crimson Red */
 }
 
 #contact-form button {
-    background: #FEE715;
-    color: #101820;
+    background: #A4193D;
+    color: #fff;
     padding: 0.8rem;
     border: none;
     border-radius: 5px;
@@ -243,7 +243,7 @@ nav {
 }
 
 #contact-form button:hover {
-    background: #E5D010;
+    background: #8b1333;
     transform: translateY(-1px);
 }
 
@@ -253,7 +253,7 @@ nav {
 
 .social-links a {
     margin: 0 1rem;
-    color: #FEE715;
+    color: #A4193D;
     text-decoration: none;
 }
 
@@ -267,7 +267,7 @@ footer {
     color: #D3D3D3;
     text-align: center;
     padding: 1rem;
-    border-top: 1px solid rgba(254, 231, 21, 0.1);
+    border-top: 1px solid rgba(164, 25, 61, 0.2);
 }
 
 /* Responsive Design */
@@ -281,7 +281,7 @@ footer {
         background: #151F28;
         width: 100%;
         padding: 1rem;
-        border-bottom: 1px solid rgba(254, 231, 21, 0.2);
+        border-bottom: 1px solid rgba(164, 25, 61, 0.3);
     }
 
     .nav-links.active {
@@ -329,7 +329,7 @@ footer {
 .loader-logo {
     font-family: 'Great Vibes', cursive;
     font-size: 3rem;
-    color: #FEE715; /* Vivid Yellow accent */
+    color: #A4193D; /* Crimson Red accent */
     margin-bottom: 1rem;
 }
 
@@ -337,7 +337,7 @@ footer {
     width: 40px;
     height: 40px;
     border: 4px solid #192531;
-    border-top: 4px solid #FEE715; /* Vivid Yellow spinner ring */
+    border-top: 4px solid #A4193D; /* Crimson Red spinner ring */
     border-radius: 50%;
     margin: 0 auto;
     animation: spin 1s linear infinite;
@@ -353,4 +353,3 @@ footer {
     opacity: 0;
     visibility: hidden;
 }
-
