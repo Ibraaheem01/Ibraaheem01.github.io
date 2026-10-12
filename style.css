@@ -6,19 +6,19 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Cinzel', serif; /* Default fancy serif font */
+    font-family: 'Cinzel', serif;
 }
 
 body {
     line-height: 1.6;
-    color: #333;
-    background: #E6E6E6; /* Ash (light gray) for main body background */
+    color: #E6E6E6; /* Light gray text for readability against dark backgrounds */
+    background: #101820; /* Rich Black background */
 }
 
 /* Navigation */
 nav {
-    background: #4A4A4A; /* Grey (darker gray) for navbar */
-    color: #fff;
+    background: #151F28; /* Slightly lighter rich black for navbar contrast */
+    color: #FEE715; /* Vivid Yellow accent */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,12 +27,14 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid rgba(254, 231, 21, 0.2);
 }
 
 .logo {
-    font-family: 'Great Vibes', cursive; /* Fancy cursive font for logo */
+    font-family: 'Great Vibes', cursive;
     font-size: 2rem;
     font-weight: 400;
+    color: #FEE715; /* Vivid Yellow logo */
 }
 
 .nav-links {
@@ -42,75 +44,75 @@ nav {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #E6E6E6;
     text-decoration: none;
     font-size: 1rem;
-    font-family: 'Cinzel', serif;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #C0392B; /* Red accent for hover */
+    color: #FEE715; /* Vivid Yellow hover */
 }
 
 .hamburger {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: #FEE715;
 }
 
 /* Home Section */
 #home {
     height: 100vh;
-    background: linear-gradient(to right, #E6E6E6, #B0B0B0); /* Ash to grey gradient */
+    background: linear-gradient(135deg, #101820, #1F2A36); /* Rich dark gradient */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #333;
+    color: #E6E6E6;
 }
 
 .hero h1 {
-    font-family: 'Great Vibes', cursive; /* Fancy cursive font */
+    font-family: 'Great Vibes', cursive;
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: #C0392B; /* Red accent for hero heading */
+    color: #FEE715; /* Vivid Yellow accent */
 }
 
 .hero p {
-    font-family: 'Cinzel', serif;
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: #D3D3D3;
 }
 
 .cta-button {
-    background: #C0392B; /* Red accent for button */
-    color: #fff;
+    background: #FEE715; /* Vivid Yellow button */
+    color: #101820; /* Rich black text for sharp contrast */
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-family: 'Cinzel', serif;
     display: inline-block;
-    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth hover transition */
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .cta-button:hover {
-    background: #A93226; /* Darker red for hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background: #E5D010; /* Slightly deeper yellow on hover */
+    transform: translateY(-2px);
 }
 
 /* About Section */
 #about {
     padding: 5rem 2rem;
-    background: #F5F5F5; /* Ash (very light gray) for section background */
+    background: #151F28; /* Dark section background */
     text-align: center;
+    color: #E6E6E6;
 }
 
 #about h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #C0392B; /* Red accent for heading */
+    color: #FEE715; /* Vivid Yellow accent */
 }
 
 .about-content {
@@ -122,28 +124,29 @@ nav {
 }
 
 .about-content img {
-    width: 200px;       /* Sets a clean, fixed width */
-    height: 200px;      /* Matches the width to keep it square */
-    object-fit: cover;  /* Prevents your face/photo from getting distorted or stretched */
-    border-radius: 50%; /* Keeps it in a perfect circle */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FEE715; /* Vivid Yellow frame around your picture */
 }
 
 .about-content p {
     font-size: 1.1rem;
-    font-family: 'Cinzel', serif;
+    text-align: left;
 }
 
 /* Projects Section */
 #projects {
     padding: 5rem 2rem;
-    background: #D3D3D3; /* Slightly darker ash for contrast */
+    background: #101820; /* Rich Black */
     text-align: center;
 }
 
 #projects h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #C0392B; /* Red accent for heading */
+    color: #FEE715;
 }
 
 .project-grid {
@@ -155,35 +158,36 @@ nav {
 }
 
 .project-card {
-    background: #4A4A4A; /* Grey for project cards */
-    color: #fff;
-    padding: 1rem;
+    background: #192531; /* Deep slate card background */
+    color: #E6E6E6;
+    padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth card lift transition */
+    border: 1px solid rgba(254, 231, 21, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Lifts card up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(254, 231, 21, 0.15); /* Soft yellow glow on hover */
 }
 
 .project-card img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .project-card h3 {
     margin: 1rem 0;
-    font-family: 'Cinzel', serif;
+    color: #FEE715; /* Vivid Yellow card titles */
 }
 
 .project-link {
     display: inline-block;
     margin-top: 0.5rem;
-    color: #C0392B; /* Red accent for links */
+    color: #FEE715;
     text-decoration: none;
-    font-family: 'Cinzel', serif;
+    font-weight: bold;
 }
 
 .project-link:hover {
@@ -193,14 +197,14 @@ nav {
 /* Contact Section */
 #contact {
     padding: 5rem 2rem;
-    background: #F5F5F5; /* Ash for contact section */
+    background: #151F28;
     text-align: center;
 }
 
 #contact h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #C0392B; /* Red accent for heading */
+    color: #FEE715;
 }
 
 #contact-form {
@@ -214,24 +218,32 @@ nav {
 #contact-form input,
 #contact-form textarea {
     padding: 0.8rem;
-    border: 1px solid #4A4A4A; /* Grey for borders */
+    background: #101820;
+    border: 1px solid #2C3E50;
+    color: #E6E6E6;
     border-radius: 5px;
     font-family: 'Cinzel', serif;
 }
 
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #FEE715; /* Focus ring turns Vivid Yellow */
+}
+
 #contact-form button {
-    background: #C0392B; /* Red accent for button */
-    color: #fff;
+    background: #FEE715;
+    color: #101820;
     padding: 0.8rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Cinzel', serif;
+    font-weight: bold;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 #contact-form button:hover {
-    background: #A93226; /* Darker red for hover */
+    background: #E5D010;
     transform: translateY(-1px);
 }
 
@@ -241,9 +253,8 @@ nav {
 
 .social-links a {
     margin: 0 1rem;
-    color: #C0392B; /* Red accent for social links */
+    color: #FEE715;
     text-decoration: none;
-    font-family: 'Cinzel', serif;
 }
 
 .social-links a:hover {
@@ -252,11 +263,11 @@ nav {
 
 /* Footer */
 footer {
-    background: #4A4A4A; /* Grey for footer */
-    color: #fff;
+    background: #101820;
+    color: #D3D3D3;
     text-align: center;
     padding: 1rem;
-    font-family: 'Cinzel', serif;
+    border-top: 1px solid rgba(254, 231, 21, 0.1);
 }
 
 /* Responsive Design */
@@ -267,9 +278,10 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-        background: #4A4A4A; /* Grey for mobile nav */
+        background: #151F28;
         width: 100%;
         padding: 1rem;
+        border-bottom: 1px solid rgba(254, 231, 21, 0.2);
     }
 
     .nav-links.active {
@@ -283,7 +295,11 @@ footer {
     .about-content {
         flex-direction: column;
         text-align: center;
-        gap: 1.5rem; /* Adds balanced spacing between the image and your bio text */
+        gap: 1.5rem;
+    }
+
+    .about-content p {
+        text-align: center;
     }
 
     .hero h1 {
