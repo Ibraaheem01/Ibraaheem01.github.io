@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     font-family: 'Cinzel', serif; /* Default fancy serif font */
 }
 
@@ -46,6 +46,7 @@ nav {
     text-decoration: none;
     font-size: 1rem;
     font-family: 'Cinzel', serif;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -90,10 +91,13 @@ nav {
     border-radius: 5px;
     font-weight: bold;
     font-family: 'Cinzel', serif;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth hover transition */
 }
 
 .cta-button:hover {
     background: #A93226; /* Darker red for hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* About Section */
@@ -156,6 +160,12 @@ nav {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth card lift transition */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lifts card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens shadow on hover */
 }
 
 .project-card img {
@@ -217,10 +227,12 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Cinzel', serif;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 #contact-form button:hover {
     background: #A93226; /* Darker red for hover */
+    transform: translateY(-1px);
 }
 
 .social-links {
