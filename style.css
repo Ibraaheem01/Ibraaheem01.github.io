@@ -224,7 +224,8 @@ nav {
     border: 1px solid #2C3E50;
     color: #E6E6E6;
     border-radius: 5px;
-    font-family: 'Cinzel', serif;
+    font-family: sans-serif; /* Clean, modern typing font */
+    font-size: 1rem;         /* Ensures comfortable reading size */
 }
 
 #contact-form input:focus,
@@ -394,4 +395,65 @@ footer {
 .cta-button-secondary:hover {
     background: #A4193D;
     transform: translateY(-2px);
+}
+
+/* Custom Form Notification Toast */
+.notification-toast {
+    visibility: hidden;
+    opacity: 0;
+    max-width: 400px;
+    margin: 1.5rem auto 0 auto;
+    background: #192531; /* Deep slate card background */
+    color: #E6E6E6;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #A4193D; /* Crimson Red accent border */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+    transform: translateY(15px); /* Starts slightly lower for slide animation */
+}
+
+/* Class triggered via JS to show the popup with animation */
+.notification-toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* Slides up smoothly into place */
+}
+
+/* Freelance Availability Badge Styles */
+.freelance-badge {
+    display: inline-block;
+    background: rgba(164, 25, 61, 0.15); /* Soft translucent crimson background */
+    color: #E6E6E6;
+    border: 1px solid rgba(164, 25, 61, 0.4);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tech Stack Badges / Pills Container */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* Individual Tech Tag Pill */
+.tag {
+    background: #101820; /* Rich Black background */
+    color: #A4193D;     /* Crimson Red text */
+    border: 1px solid rgba(164, 25, 61, 0.3);
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.5px;
 }

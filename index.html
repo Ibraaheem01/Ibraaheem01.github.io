@@ -33,6 +33,10 @@
         <div class="hero">
             <h1>Welcome to My Portfolio</h1>
             <p>Hi, I&rsquo;m Oyekanmi Ibraheem Oyeleke, a Petroleum & Gas Engineer, Embedded Systems Developer, Web Developer, and Mechanic. Explore my work and get in touch!</p>
+            <!-- Freelance Availability Highlight -->
+            <div class="freelance-badge">
+                🚀 Available for Freelance Projects: Frontend Web Dev, C++ IoT Prototyping & Technical Documentation
+            </div>
             <div class="hero-buttons">
                 <a href="#projects" class="cta-button">View My Work</a>
                 <a href="Oyekanmi_Ibraheem_Resume.PDF" target="_blank" class="cta-button-secondary">Download CV</a>
@@ -76,24 +80,44 @@
                 <img src="iot-schematic.png" alt="IoT Dual-Zone LPG Leakage System Schematic">
                 <h3>IoT Dual-Zone LPG Leakage System</h3>
                 <p>An automated dual-zone Liquefied Petroleum Gas leakage detection and mitigation system powered by an ESP32 microcontroller, gas sensors, local LED and buzzer alerts, a GSM module, and solenoid valve actuators with custom C++ firmware.</p>
+                <!-- Tech Stack Badges -->
+                <div class="tech-tags">
+                    <span class="tag">ESP32</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">GSM</span>
+                    <span class="tag">IoT</span>
+                </div>
                 <a href="https://github.com/Ibraaheem01/IoT-LPG-Leakage-Detection-System" target="_blank" class="project-link">View on GitHub</a>
             </div>
             <div class="project-card">
                 <img src="portfolio.jpg" alt="Personal Web Portfolio">
                 <h3>Personal Web Portfolio</h3>
                 <p>A responsive personal portfolio website designed from scratch using HTML, CSS, and modern typography, hosted live via GitHub Pages.</p>
+                <!-- Tech Stack Badges -->
+                <div class="tech-tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">GitHub Pages</span>
+                </div>
                 <a href="https://ibraaheem01.github.io" target="_blank" class="project-link">Live Site</a>
             </div>
             <div class="project-card">
                 <img src="mechanic-work.jpg" alt="Automotive Diagnostics and Mechanical Work">
                 <h3>Automotive Diagnostics & Repairs</h3>
                 <p>Hands-on diagnostic workflows and mechanical problem-solving covering vehicle systems, troubleshooting, and precision maintenance.</p>
+                <!-- Tech Stack Badges -->
+                <div class="tech-tags">
+                    <span class="tag">Diagnostics</span>
+                    <span class="tag">Troubleshooting</span>
+                    <span class="tag">Maintenance</span>
+                </div>
                 <a href="#contact" class="project-link">Learn More</a>
             </div>
         </div>
     </section>
 
-        <!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <form id="contact-form" action="https://formspree.io/f/xbgdqyyj" method="POST">
@@ -102,12 +126,16 @@
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        
+        <!-- Custom Popup Notification Toast -->
+        <div id="form-notification" class="notification-toast">Message sent successfully!</div>
+
         <div class="social-links">
             <a href="https://www.linkedin.com/in/ibraheem-oyekanmi-629a01302" target="_blank">LinkedIn</a>
             <a href="https://www.github.com/Ibraaheem01" target="_blank">GitHub</a>
             <a href="https://wa.me/2348103337556" target="_blank">WhatsApp</a>
         </div>
-    </section>
+    </section>    
 
     <!-- Footer -->
     <footer>

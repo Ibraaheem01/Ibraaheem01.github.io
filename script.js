@@ -22,11 +22,12 @@ window.addEventListener('load', () => {
     preloader.classList.add('preload-finished');
 });
 
-// Handle Formspree AJAX Submission with Custom Response
+// Form submission with custom animated notification
 const contactForm = document.getElementById('contact-form');
+const notification = document.getElementById('form-notification');
 
 contactForm.addEventListener('submit', async function(e) {
-    e.preventDefault(); // Stop standard redirect
+    e.preventDefault();
     
     const formData = new FormData(contactForm);
     
@@ -40,12 +41,21 @@ contactForm.addEventListener('submit', async function(e) {
         });
         
         if (response.ok) {
-            alert('Thank you! Your message has been sent successfully.');
-            contactForm.reset(); // Clear the form inputs
+            // Show custom success toast
+            notification.textContent = 'Thank you! Your message has been sent successfully.';
+            notification.classList.add('show');
+            contactForm.reset();
+            
+            // Hide the toast automatically after 5 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 5000);
         } else {
-            alert('Oops! There was a problem submitting your form. Please try again.');
+            notification.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+            notification.classList.add('show');
         }
     } catch (error) {
-        alert('Network error. Please check your connection and try again.');
+        notification.textContent = 'Network error. Please check your connection and try again.';
+        notification.classList.add('show');
     }
 });
