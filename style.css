@@ -252,7 +252,31 @@ nav {
 
 .social-links {
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
+
+.social-btn {
+    background: #101820;
+    color: #A4193D;
+    border: 1px solid rgba(164, 25, 61, 0.4);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.social-btn:hover {
+    background: #A4193D;
+    color: #fff;
+    transform: translateY(-2px);
+}font: ;
 
 .social-links a {
     margin: 0 1rem;
@@ -441,6 +465,7 @@ footer {
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Centers the pills horizontally */
     gap: 0.5rem;
     margin: 1rem 0;
 }
