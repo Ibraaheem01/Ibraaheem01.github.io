@@ -158,12 +158,14 @@ nav {
 }
 
 .project-card {
-    background: #192531; /* Deep slate card background */
+    background: rgba(25, 37, 49, 0.75); /* Semi-transparent deep slate */
+    backdrop-filter: blur(10px);        /* Creates the frosted glass blur effect */
+    -webkit-backdrop-filter: blur(10px);  /* Safari support */
     color: #E6E6E6;
     padding: 1.5rem;
     border-radius: 10px;
-    border: 1px solid rgba(164, 25, 61, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(164, 25, 61, 0.3); /* Slightly more defined crimson border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
