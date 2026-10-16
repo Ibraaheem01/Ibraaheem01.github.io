@@ -61,21 +61,52 @@ nav {
     color: #A4193D;
 }
 
-/* Home Section */
+/* Home Section - Full Immersive Viewport Height */
 #home {
-    min-height: auto; /* Lets the content define the height naturally */
+    height: 100vh; /* Fills the entire screen on load */
     background: linear-gradient(135deg, #101820, #1F2A36);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #E6E6E6;
-    padding: 120px 20px 80px 20px; /* Perfect top and bottom spacing */
+    padding: 0 20px;
+    position: relative; /* Required to anchor the scroll indicator at the bottom */
 }
 
 .hero {
     max-width: 900px;
     margin: 0 auto;
+}
+
+/* Scroll Down Indicator Styling */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #A4193D; /* Crimson Red accent */
+    font-size: 1.2rem;
+    animation: bounce 2s infinite;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.scroll-indicator:hover {
+    color: #E6E6E6;
+}
+
+/* Gentle bouncing animation for the scroll arrow */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0);
+    }
+    40% {
+        transform: translate(-50%, -10px);
+    }
+    60% {
+        transform: translate(-50%, -5px);
+    }
 }
 
 .hero h1 {
@@ -173,6 +204,7 @@ nav {
     border: 1px solid rgba(164, 25, 61, 0.3); /* Slightly more defined crimson border */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures the image doesn't overflow the card border on zoom */
 }
 
 .project-card:hover {
@@ -180,9 +212,11 @@ nav {
     box-shadow: 0 8px 20px rgba(164, 25, 61, 0.25); /* Soft crimson glow on hover */
 }
 
+/* Smooth zoom effect for project images on hover */
 .project-card img {
     width: 100%;
     border-radius: 8px;
+    transition: transform 0.4s ease; /* Smooth transition duration */
 }
 
 .project-card h3 {
@@ -487,4 +521,35 @@ footer {
     font-weight: bold;
     font-family: 'Cinzel', serif;
     letter-spacing: 0.5px;
+}
+
+/* Hide mobile hire button on desktop */
+.mobile-hire-item {
+    display: none;
+}
+
+/* Styles for the mobile dropdown button */
+.mobile-hire-btn {
+    background: #A4193D;
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Show and style it properly inside the mobile menu media query */
+@media (max-width: 768px) {
+    .mobile-hire-item {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        align-items: center; /* Centers the links and hire button nicely */
+    }
 }
