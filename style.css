@@ -63,13 +63,19 @@ nav {
 
 /* Home Section */
 #home {
-    height: 100vh;
-    background: linear-gradient(135deg, #101820, #1F2A36); /* Rich dark gradient */
+    min-height: auto; /* Lets the content define the height naturally */
+    background: linear-gradient(135deg, #101820, #1F2A36);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #E6E6E6;
+    padding: 120px 20px 80px 20px; /* Perfect top and bottom spacing */
+}
+
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -276,7 +282,7 @@ nav {
     background: #A4193D;
     color: #fff;
     transform: translateY(-2px);
-}font: ;
+}
 
 .social-links a {
     margin: 0 1rem;
