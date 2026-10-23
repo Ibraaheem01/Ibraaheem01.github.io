@@ -313,10 +313,13 @@ nav {
 
 .social-links {
     margin-top: 2rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 180px)); /* Creates a neat 2-column grid */
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .social-btn {
@@ -329,7 +332,9 @@ nav {
     font-weight: bold;
     display: inline-flex;
     align-items: center;
+    justify-content: center; /* Centers the icon and text inside each button */
     gap: 0.5rem;
+    width: 100%; /* Makes all buttons fill their grid cell uniformly */
     transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
@@ -337,6 +342,13 @@ nav {
     background: #C27867;
     color: #181716;
     transform: translateY(-2px);
+}
+
+/* Makes the last social button stretch across both columns and center itself */
+.social-links .social-btn:nth-child(5) {
+    grid-column: span 2;
+    max-width: 220px;
+    margin: 0 auto;
 }
 
 .social-links a {
@@ -634,14 +646,9 @@ footer {
 }
 
 /* --- Light Theme Styles (Triggered via Manual Toggle OR System Preference) --- */
-body.light-theme,
-@media (prefers-color-scheme: light) {
-    /* Only apply media query automatically if user hasn't manually set a preference */
-}
-
 body.light-theme {
     background: #F4F1EA;
-    color: #2C2825;
+    color: #2C2825; /* Dark, sharp text color for high contrast */
 }
 
 body.light-theme nav {
@@ -662,27 +669,36 @@ body.light-theme #home {
     color: #2C2825;
 }
 
-body.light-theme .hero p {
-    color: #5C554F;
+body.light-theme .hero p,
+body.light-theme .about-content p,
+body.light-theme .project-card p,
+body.light-theme footer p {
+    color: #4A4540 !important; /* Forces all paragraphs and text to be fully crisp and readable */
 }
 
 body.light-theme #about,
 body.light-theme #contact,
 body.light-theme #preloader {
     background: #EAE5DC;
+    color: #2C2825;
 }
 
 body.light-theme #projects,
 body.light-theme #skills,
 body.light-theme footer {
     background: #F4F1EA;
+    color: #2C2825;
 }
 
 body.light-theme .project-card {
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(194, 120, 103, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(194, 120, 103, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     color: #2C2825;
+}
+
+body.light-theme .project-card h3 {
+    color: #A86455; /* Slightly deeper terracotta for high contrast on light cards */
 }
 
 body.light-theme #contact-form input,
@@ -695,12 +711,37 @@ body.light-theme #contact-form textarea {
 body.light-theme .notification-toast {
     background: #FFFFFF;
     color: #2C2825;
+    border: 1px solid #C27867;
 }
 
 body.light-theme .tag {
     background: #EAE5DC;
+    color: #A86455;
+    border: 1px solid rgba(194, 120, 103, 0.4);
 }
 
 body.light-theme .social-btn {
     background: #FFFFFF;
+    color: #A86455;
+    border: 1px solid rgba(194, 120, 103, 0.4);
+}
+
+body.light-theme .social-btn:hover {
+    background: #C27867;
+    color: #FFFFFF;
+}
+
+body.light-theme .freelance-badge {
+    background: rgba(194, 120, 103, 0.15); /* Slightly richer light terracotta tint */
+    color: #4A4540 !important;             /* Crisp, dark text for full readability */
+    border: 1px solid rgba(194, 120, 103, 0.4); /* Stronger border definition */
+}
+
+body.light-theme .hamburger {
+    color: #2C2825 !important; /* Forces the hamburger icon to be crisp and dark */
+}
+
+body.light-theme .nav-links.active {
+    background: #EAE5DC; /* Ensures the mobile dropdown menu background is solid and clean */
+    border-bottom: 1px solid rgba(194, 120, 103, 0.3);
 }
