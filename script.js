@@ -92,6 +92,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Safe Theme Toggle (Handles LocalStorage Restrictions in Apps) ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+
+    let savedTheme = null;
+    try {
+        savedTheme = localStorage.getItem('portfolio-theme');
+    } catch (e) {
+        // Fallback if local storage is restricted by the local file environment
+    }
+
+    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+    if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+        document.body.classList.add('light-theme');
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            
+            const isLight = document.body.classList.contains('light-theme');
+            
+            try {
+                localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            } catch (e) {
+                // Ignore if storage is blocked locally
+            }
+
+            if (themeIcon) {
+                if (isLight) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            }
+        });
+    }
+
 });
 
 // Hide preloader when window loads completely
@@ -100,4 +145,23 @@ window.addEventListener('load', () => {
     if (preloader) {
         preloader.classList.add('preload-finished');
     }
+});
+
+// --- Scroll Fade Animation Observer ---
+document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const fadeElements = document.querySelectorAll('.scroll-fade');
+    fadeElements.forEach(element => observer.observe(element));
 });
