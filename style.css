@@ -11,14 +11,14 @@
 
 body {
     line-height: 1.6;
-    color: #E6E6E6; /* Light gray text for readability against dark backgrounds */
-    background: #101820; /* Rich Black background */
+    color: #D4CDCD; /* Soft muted gray text for readability against dark backgrounds */
+    background: #181716; /* Soft, warm dark charcoal background */
 }
 
 /* Navigation */
 nav {
-    background: #151F28; /* Slightly lighter rich black for navbar contrast */
-    color: #A4193D; /* Crimson Red accent */
+    background: #201E1D; /* Slightly lighter muted charcoal for navbar contrast */
+    color: #C27867; /* Refined Dusty Terracotta accent */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,49 +27,67 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(164, 25, 61, 0.3);
+    border-bottom: 1px solid rgba(194, 120, 103, 0.2);
 }
 
 .logo {
     font-family: 'Great Vibes', cursive;
     font-size: 2rem;
     font-weight: 400;
-    color: #A4193D; /* Crimson Red logo */
+    color: #C27867; /* Dusty Terracotta logo */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 }
 
 .nav-links a {
-    color: #E6E6E6;
+    color: #D4CDCD;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #A4193D; /* Crimson Red hover */
+    color: #C27867; /* Dusty Terracotta hover */
+}
+
+/* Theme Toggle Button Style */
+.theme-btn {
+    background: transparent;
+    border: 1px solid rgba(194, 120, 103, 0.4);
+    color: #C27867;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-btn:hover {
+    background: #C27867;
+    color: #181716;
 }
 
 .hamburger {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #A4193D;
+    color: #C27867;
 }
 
 /* Home Section - Full Immersive Viewport Height */
 #home {
     height: 100vh; /* Fills the entire screen on load */
-    background: linear-gradient(135deg, #101820, #1F2A36);
+    background: linear-gradient(135deg, #181716, #262322);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #E6E6E6;
+    color: #D4CDCD;
     padding: 0 20px;
     position: relative; /* Required to anchor the scroll indicator at the bottom */
 }
@@ -85,7 +103,7 @@ nav {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    color: #A4193D; /* Crimson Red accent */
+    color: #C27867; /* Dusty Terracotta accent */
     font-size: 1.2rem;
     animation: bounce 2s infinite;
     text-decoration: none;
@@ -93,7 +111,7 @@ nav {
 }
 
 .scroll-indicator:hover {
-    color: #E6E6E6;
+    color: #F5F2EC;
 }
 
 /* Gentle bouncing animation for the scroll arrow */
@@ -113,18 +131,18 @@ nav {
     font-family: 'Great Vibes', cursive;
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: #A4193D; /* Crimson Red accent */
+    color: #C27867; /* Dusty Terracotta accent */
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #D3D3D3;
+    color: #B5ABAB; /* Soft muted subtext */
 }
 
 .cta-button {
-    background: #A4193D; /* Crimson Red button */
-    color: #fff; /* White text for sharp contrast */
+    background: #C27867; /* Dusty Terracotta button */
+    color: #181716; /* Dark charcoal text for soft, elegant contrast */
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
@@ -134,22 +152,23 @@ nav {
 }
 
 .cta-button:hover {
-    background: #8b1333; /* Darker crimson on hover */
+    background: #A86455; /* Slightly deeper terracotta on hover */
     transform: translateY(-2px);
+    color: #F5F2EC;
 }
 
 /* About Section */
 #about {
     padding: 5rem 2rem;
-    background: #151F28; /* Dark section background */
+    background: #201E1D; /* Dark section background */
     text-align: center;
-    color: #E6E6E6;
+    color: #D4CDCD;
 }
 
 #about h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #A4193D; /* Crimson Red accent */
+    color: #C27867; /* Dusty Terracotta accent */
 }
 
 .about-content {
@@ -165,7 +184,7 @@ nav {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #A4193D; /* Crimson Red frame around your picture */
+    border: 3px solid #C27867; /* Dusty Terracotta frame around your picture */
 }
 
 .about-content p {
@@ -176,14 +195,14 @@ nav {
 /* Projects Section */
 #projects {
     padding: 5rem 2rem;
-    background: #101820; /* Rich Black */
+    background: #181716; /* Warm Dark Charcoal */
     text-align: center;
 }
 
 #projects h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #A4193D;
+    color: #C27867;
 }
 
 .project-grid {
@@ -195,21 +214,21 @@ nav {
 }
 
 .project-card {
-    background: rgba(25, 37, 49, 0.75); /* Semi-transparent deep slate */
+    background: rgba(38, 35, 34, 0.75); /* Semi-transparent muted slate/taupe */
     backdrop-filter: blur(10px);        /* Creates the frosted glass blur effect */
     -webkit-backdrop-filter: blur(10px);  /* Safari support */
-    color: #E6E6E6;
+    color: #D4CDCD;
     padding: 1.5rem;
     border-radius: 10px;
-    border: 1px solid rgba(164, 25, 61, 0.3); /* Slightly more defined crimson border */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(194, 120, 103, 0.25); /* Subtle defined border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden; /* Ensures the image doesn't overflow the card border on zoom */
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(164, 25, 61, 0.25); /* Soft crimson glow on hover */
+    box-shadow: 0 8px 20px rgba(194, 120, 103, 0.15); /* Soft terracotta glow on hover */
 }
 
 /* Smooth zoom effect for project images on hover */
@@ -217,17 +236,18 @@ nav {
     width: 100%;
     border-radius: 8px;
     transition: transform 0.4s ease; /* Smooth transition duration */
+    cursor: pointer;
 }
 
 .project-card h3 {
     margin: 1rem 0;
-    color: #A4193D; /* Crimson Red card titles */
+    color: #C27867; /* Dusty Terracotta card titles */
 }
 
 .project-link {
     display: inline-block;
     margin-top: 0.5rem;
-    color: #A4193D;
+    color: #C27867;
     text-decoration: none;
     font-weight: bold;
 }
@@ -239,14 +259,14 @@ nav {
 /* Contact Section */
 #contact {
     padding: 5rem 2rem;
-    background: #151F28;
+    background: #201E1D;
     text-align: center;
 }
 
 #contact h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #A4193D;
+    color: #C27867;
 }
 
 #contact-form {
@@ -260,9 +280,9 @@ nav {
 #contact-form input,
 #contact-form textarea {
     padding: 0.8rem;
-    background: #101820;
-    border: 1px solid #2C3E50;
-    color: #E6E6E6;
+    background: #181716;
+    border: 1px solid #363331;
+    color: #D4CDCD;
     border-radius: 5px;
     font-family: sans-serif; /* Clean, modern typing font */
     font-size: 1rem;         /* Ensures comfortable reading size */
@@ -271,12 +291,12 @@ nav {
 #contact-form input:focus,
 #contact-form textarea:focus {
     outline: none;
-    border-color: #A4193D; /* Focus ring turns Crimson Red */
+    border-color: #C27867; /* Focus ring turns Dusty Terracotta */
 }
 
 #contact-form button {
-    background: #A4193D;
-    color: #fff;
+    background: #C27867;
+    color: #181716;
     padding: 0.8rem;
     border: none;
     border-radius: 5px;
@@ -286,8 +306,9 @@ nav {
 }
 
 #contact-form button:hover {
-    background: #8b1333;
+    background: #A86455;
     transform: translateY(-1px);
+    color: #F5F2EC;
 }
 
 .social-links {
@@ -299,9 +320,9 @@ nav {
 }
 
 .social-btn {
-    background: #101820;
-    color: #A4193D;
-    border: 1px solid rgba(164, 25, 61, 0.4);
+    background: #181716;
+    color: #C27867;
+    border: 1px solid rgba(194, 120, 103, 0.3);
     padding: 0.6rem 1.2rem;
     border-radius: 5px;
     text-decoration: none;
@@ -313,14 +334,14 @@ nav {
 }
 
 .social-btn:hover {
-    background: #A4193D;
-    color: #fff;
+    background: #C27867;
+    color: #181716;
     transform: translateY(-2px);
 }
 
 .social-links a {
     margin: 0 1rem;
-    color: #A4193D;
+    color: #C27867;
     text-decoration: none;
 }
 
@@ -330,11 +351,11 @@ nav {
 
 /* Footer */
 footer {
-    background: #101820;
-    color: #D3D3D3;
+    background: #181716;
+    color: #B5ABAB;
     text-align: center;
     padding: 1rem;
-    border-top: 1px solid rgba(164, 25, 61, 0.2);
+    border-top: 1px solid rgba(194, 120, 103, 0.15);
 }
 
 /* Responsive Design */
@@ -345,14 +366,15 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-        background: #151F28;
+        background: #201E1D;
         width: 100%;
         padding: 1rem;
-        border-bottom: 1px solid rgba(164, 25, 61, 0.3);
+        border-bottom: 1px solid rgba(194, 120, 103, 0.2);
     }
 
     .nav-links.active {
         display: flex;
+        align-items: center;
     }
 
     .hamburger {
@@ -381,7 +403,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #101820; /* Rich Black background */
+    background: #181716; /* Warm Dark Charcoal background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -396,15 +418,15 @@ footer {
 .loader-logo {
     font-family: 'Great Vibes', cursive;
     font-size: 3rem;
-    color: #A4193D; /* Crimson Red accent */
+    color: #C27867; /* Dusty Terracotta accent */
     margin-bottom: 1rem;
 }
 
 .spinner {
     width: 40px;
     height: 40px;
-    border: 4px solid #192531;
-    border-top: 4px solid #A4193D; /* Crimson Red spinner ring */
+    border: 4px solid #2B2826;
+    border-top: 4px solid #C27867; /* Dusty Terracotta spinner ring */
     border-radius: 50%;
     margin: 0 auto;
     animation: spin 1s linear infinite;
@@ -424,14 +446,14 @@ footer {
 /* Skills Section Styles */
 #skills {
     padding: 5rem 2rem;
-    background: #101820; /* Rich Black background */
+    background: #181716; /* Warm Dark Charcoal background */
     text-align: center;
 }
 
 #skills h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: #A4193D; /* Crimson Red accent */
+    color: #C27867; /* Dusty Terracotta accent */
     margin-bottom: 2rem;
 }
 
@@ -445,19 +467,20 @@ footer {
 
 /* Secondary Button Style for CV Download */
 .cta-button-secondary {
-    background: #151F28;
-    color: #fff;
+    background: #201E1D;
+    color: #F5F2EC;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    border: 1px solid #A4193D;
+    border: 1px solid #C27867;
     display: inline-block;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .cta-button-secondary:hover {
-    background: #A4193D;
+    background: #C27867;
+    color: #181716;
     transform: translateY(-2px);
 }
 
@@ -467,12 +490,12 @@ footer {
     opacity: 0;
     max-width: 400px;
     margin: 1.5rem auto 0 auto;
-    background: #192531; /* Deep slate card background */
-    color: #E6E6E6;
+    background: #262322; /* Slate card background */
+    color: #D4CDCD;
     padding: 1rem 1.5rem;
     border-radius: 8px;
-    border: 1px solid #A4193D; /* Crimson Red accent border */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border: 1px solid #C27867; /* Dusty Terracotta accent border */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     font-family: 'Cinzel', serif;
     font-size: 0.95rem;
     text-align: center;
@@ -490,15 +513,15 @@ footer {
 /* Freelance Availability Badge Styles */
 .freelance-badge {
     display: inline-block;
-    background: rgba(164, 25, 61, 0.15); /* Soft translucent crimson background */
-    color: #E6E6E6;
-    border: 1px solid rgba(164, 25, 61, 0.4);
+    background: rgba(194, 120, 103, 0.1); /* Soft translucent terracotta background */
+    color: #D4CDCD;
+    border: 1px solid rgba(194, 120, 103, 0.3);
     padding: 0.6rem 1.2rem;
     border-radius: 30px;
     font-size: 0.9rem;
     font-family: 'Cinzel', serif;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Tech Stack Badges / Pills Container */
@@ -512,9 +535,9 @@ footer {
 
 /* Individual Tech Tag Pill */
 .tag {
-    background: #101820; /* Rich Black background */
-    color: #A4193D;     /* Crimson Red text */
-    border: 1px solid rgba(164, 25, 61, 0.3);
+    background: #181716; /* Warm Dark Charcoal background */
+    color: #C27867;     /* Dusty Terracotta text */
+    border: 1px solid rgba(194, 120, 103, 0.25);
     padding: 0.25rem 0.65rem;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -530,8 +553,8 @@ footer {
 
 /* Styles for the mobile dropdown button */
 .mobile-hire-btn {
-    background: #A4193D;
-    color: #fff !important;
+    background: #C27867;
+    color: #181716 !important;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     text-align: center;
@@ -547,11 +570,6 @@ footer {
         text-align: center;
         width: 100%;
     }
-    
-    .nav-links.active {
-        display: flex;
-        align-items: center; /* Centers the links and hire button nicely */
-    }
 }
 
 /* --- Fullscreen Image Modal Viewer Styles --- */
@@ -563,12 +581,11 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(16, 24, 32, 0.95); /* Deep rich black backdrop with high opacity */
+    background-color: rgba(24, 23, 22, 0.95); /* Warm dark charcoal backdrop */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     
     /* Perfect centering via Flexbox */
-    display: none; /* Will be toggled to 'flex' via JS when opened */
     justify-content: center;
     align-items: center;
 }
@@ -578,7 +595,7 @@ footer {
     max-height: 85vh;
     object-fit: contain;
     border-radius: 8px;
-    border: 2px solid rgba(164, 25, 61, 0.5);
+    border: 2px solid rgba(194, 120, 103, 0.4);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
     animation: zoomIn 0.3s ease;
 }
@@ -588,7 +605,7 @@ footer {
     position: absolute;
     top: 20px;
     right: 35px;
-    color: #E6E6E6;
+    color: #D4CDCD;
     font-size: 45px;
     font-weight: bold;
     cursor: pointer;
@@ -597,7 +614,7 @@ footer {
 }
 
 .modal-close-btn:hover {
-    color: #A4193D; /* Crimson Red on hover */
+    color: #C27867; /* Dusty Terracotta on hover */
 }
 
 @keyframes zoomIn {
@@ -605,7 +622,85 @@ footer {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Add a pointer cursor to project images to show they are clickable */
-.project-card img {
-    cursor: pointer;
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-fade.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Light Theme Styles (Triggered via Manual Toggle OR System Preference) --- */
+body.light-theme,
+@media (prefers-color-scheme: light) {
+    /* Only apply media query automatically if user hasn't manually set a preference */
+}
+
+body.light-theme {
+    background: #F4F1EA;
+    color: #2C2825;
+}
+
+body.light-theme nav {
+    background: #EAE5DC;
+    border-bottom: 1px solid rgba(194, 120, 103, 0.15);
+}
+
+body.light-theme .nav-links a {
+    color: #2C2825;
+}
+
+body.light-theme .nav-links a:hover {
+    color: #C27867;
+}
+
+body.light-theme #home {
+    background: linear-gradient(135deg, #F4F1EA, #E2DDD5);
+    color: #2C2825;
+}
+
+body.light-theme .hero p {
+    color: #5C554F;
+}
+
+body.light-theme #about,
+body.light-theme #contact,
+body.light-theme #preloader {
+    background: #EAE5DC;
+}
+
+body.light-theme #projects,
+body.light-theme #skills,
+body.light-theme footer {
+    background: #F4F1EA;
+}
+
+body.light-theme .project-card {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(194, 120, 103, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    color: #2C2825;
+}
+
+body.light-theme #contact-form input,
+body.light-theme #contact-form textarea {
+    background: #FFFFFF;
+    border: 1px solid #D5CEC1;
+    color: #2C2825;
+}
+
+body.light-theme .notification-toast {
+    background: #FFFFFF;
+    color: #2C2825;
+}
+
+body.light-theme .tag {
+    background: #EAE5DC;
+}
+
+body.light-theme .social-btn {
+    background: #FFFFFF;
 }
