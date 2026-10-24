@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modal && modalImg && closeBtn) {
         document.querySelectorAll('.project-card img').forEach(img => {
             img.addEventListener('click', function() {
-                modal.style.display = 'flex'; // Uses flex to maintain perfect centering
+                modal.style.display = 'flex';
                 modalImg.src = this.src;
             });
         });
@@ -92,14 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Pure Automatic Theme Management with Session Toggle ---
+    // --- Smart Theme Toggle (Automatic Priority with Manual Dark Override) ---
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
-    // Function to update icon based on current body state
     function updateIcon() {
         if (!themeIcon) return;
-        if (document.body.classList.contains('light-theme')) {
+        const systemIsLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        const isDarkForced = document.body.classList.contains('dark-override');
+
+        if (systemIsLight && !isDarkForced) {
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
         } else {
@@ -108,13 +110,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initial icon sync
     updateIcon();
 
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
-            // Simply toggle the class for the current session without saving to storage
-            document.body.classList.toggle('light-theme');
+            const systemIsLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+            if (systemIsLight) {
+                // Toggle dark override if phone is in light mode
+                document.body.classList.toggle('dark-override');
+            } else {
+                // Toggle standard light theme if phone is in dark mode
+                document.body.classList.toggle('light-theme');
+            }
             updateIcon();
         });
     }
