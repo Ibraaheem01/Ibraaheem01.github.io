@@ -32,9 +32,11 @@ nav {
 
 .logo {
     font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #C27867; /* Dusty Terracotta logo */
+    text-shadow: 0 0 1px rgba(194, 120, 103, 0.5), 0 0 2px rgba(0, 0, 0, 0.3); /* Adds a subtle bold pop */
+    letter-spacing: 1px;
 }
 
 .nav-links {
