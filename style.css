@@ -747,3 +747,70 @@ body.light-theme .nav-links.active {
     background: #EAE5DC; /* Ensures the mobile dropdown menu background is solid and clean */
     border-bottom: 1px solid rgba(194, 120, 103, 0.3);
 }
+
+/* --- Guaranteed Automatic Light Mode Override --- */
+@media (prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+    }
+
+    body {
+        background: #F4F1EA !important;
+        color: #2C2825 !important;
+    }
+
+    nav {
+        background: #EAE5DC !important;
+        border-bottom: 1px solid rgba(194, 120, 103, 0.15) !important;
+    }
+
+    .nav-links a {
+        color: #2C2825 !important;
+    }
+
+    #home {
+        background: linear-gradient(135deg, #F4F1EA, #E2DDD5) !important;
+        color: #2C2825 !important;
+    }
+
+    .hero p, 
+    .about-content p, 
+    .project-card p, 
+    footer p {
+        color: #4A4540 !important;
+    }
+
+    #about,
+    #contact,
+    #preloader,
+    #projects,
+    #skills,
+    footer {
+        background: #F4F1EA !important;
+        color: #2C2825 !important;
+    }
+
+    .project-card {
+        background: rgba(255, 255, 255, 0.85) !important;
+        border: 1px solid rgba(194, 120, 103, 0.3) !important;
+        color: #2C2825 !important;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        background: #FFFFFF !important;
+        border: 1px solid #D5CEC1 !important;
+        color: #2C2825 !important;
+    }
+
+    .tag,
+    .social-btn {
+        background: #FFFFFF !important;
+        color: #A86455 !important;
+        border: 1px solid rgba(194, 120, 103, 0.4) !important;
+    }
+
+    .hamburger {
+        color: #2C2825 !important;
+    }
+}
