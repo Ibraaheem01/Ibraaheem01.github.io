@@ -92,48 +92,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Safe Theme Toggle (Handles LocalStorage Restrictions in Apps) ---
+    // --- Pure Automatic Theme Management with Session Toggle ---
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
-    let savedTheme = null;
-    try {
-        savedTheme = localStorage.getItem('portfolio-theme');
-    } catch (e) {
-        // Fallback if local storage is restricted by the local file environment
-    }
-
-    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-
-    if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
-        document.body.classList.add('light-theme');
-        if (themeIcon) {
+    // Function to update icon based on current body state
+    function updateIcon() {
+        if (!themeIcon) return;
+        if (document.body.classList.contains('light-theme')) {
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
         }
     }
 
+    // Initial icon sync
+    updateIcon();
+
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
+            // Simply toggle the class for the current session without saving to storage
             document.body.classList.toggle('light-theme');
-            
-            const isLight = document.body.classList.contains('light-theme');
-            
-            try {
-                localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
-            } catch (e) {
-                // Ignore if storage is blocked locally
-            }
-
-            if (themeIcon) {
-                if (isLight) {
-                    themeIcon.classList.remove('fa-moon');
-                    themeIcon.classList.add('fa-sun');
-                } else {
-                    themeIcon.classList.remove('fa-sun');
-                    themeIcon.classList.add('fa-moon');
-                }
-            }
+            updateIcon();
         });
     }
 
